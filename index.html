@@ -35,27 +35,73 @@
     </audio>
     
     <style>
-        .container {
-            background-image: url('img/frames/marco.jpg');
-            background-size: 95%;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 60px !important;
-            position: relative;
-        }
-        .container::before {
-            content: '';
+        /* Estilos para las decoraciones florales */
+        .floral-decoration {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.5);
-            z-index: 0;
-        }
-        .container > * {
-            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1;
+        }
+        .floral-top {
+            top: 0;
+        }
+        .floral-bottom {
+            bottom: 0;
+            transform: translateX(-50%) rotate(180deg);
+        }
+        .container-fluid {
+            position: relative;
+            padding-top: 200px !important;
+            padding-bottom: 200px !important;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px !important;
+            position: relative;
+            z-index: 2;
+            max-width: 1000px !important;
+        }
+        
+        /* Ajustes responsivos */
+        @media (max-width: 992px) {
+            .floral-decoration {
+                max-width: 600px;
+            }
+            .container-fluid {
+                padding-top: 150px !important;
+                padding-bottom: 150px !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .floral-decoration {
+                max-width: 400px;
+            }
+            .container-fluid {
+                padding-top: 100px !important;
+                padding-bottom: 100px !important;
+            }
+            .container {
+                padding: 30px !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .floral-decoration {
+                max-width: 300px;
+            }
+            .container-fluid {
+                padding-top: 80px !important;
+                padding-bottom: 80px !important;
+            }
+            .container {
+                padding: 20px !important;
+                margin: 0 15px;
+            }
         }
     </style>
     <div id="music-control" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
@@ -64,6 +110,9 @@
 
     <!-- Event Start -->
     <div class="container-fluid py-5" id="event">
+        <!-- Decoraciones florales -->
+        <img src="img/frames/image.png" class="floral-decoration floral-top" alt="Decoración floral superior">
+        <img src="img/frames/image.png" class="floral-decoration floral-bottom" alt="Decoración floral inferior">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-4">Nuestro matrimonio</h1>
