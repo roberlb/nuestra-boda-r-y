@@ -39,35 +39,151 @@
         .floral-decoration {
             width: 100%;
             height: auto;
-            max-width: 800px;
+            max-width: 1200px;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
+            opacity: 1;
         }
         .floral-top {
-            top: 0;
+            top: -50px;
         }
         .floral-bottom {
-            bottom: 0;
+            bottom: -50px;
             transform: translateX(-50%) rotate(180deg);
         }
         .container-fluid {
             position: relative;
-            padding-top: 200px !important;
-            padding-bottom: 200px !important;
+            padding-top: 300px !important;
+            padding-bottom: 300px !important;
+            overflow: hidden;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
             padding: 40px !important;
             position: relative;
             z-index: 2;
             max-width: 1000px !important;
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        }
+
+        /* Estilos de texto mejorados para invitación digital */
+        .section-title {
+            margin-bottom: 3rem;
+        }
+        .font-secondary.display-4 {
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .ceremony-details {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .location-details {
+            background-color: rgba(146, 117, 88, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        .location-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .location-link:hover .location-details {
+            background-color: rgba(146, 117, 88, 0.2);
+            transform: translateY(-2px);
+        }
+        .section-spacing {
+            margin-bottom: 4rem;
+        }
+
+        h5.font-weight-normal {
+            font-size: 1.8rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .text-muted {
+            color: #666666 !important;
+        }
+
+        h6.font-weight-normal {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #555555;
+        }
+
+        h6.text-uppercase {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            color: #927558;
+            font-weight: 600;
+        }
+
+        h4.mb-3 {
+            font-size: 2.5rem;
+            color: #2c2c2c;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+
+        a {
+            font-size: 1.3rem;
+            color: #927558;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #6d573f;
+            text-decoration: none;
         }
         
         /* Ajustes responsivos */
         @media (max-width: 992px) {
+            .floral-decoration {
+                max-width: 900px;
+            }
+            .container-fluid {
+                padding-top: 200px !important;
+                padding-bottom: 200px !important;
+            }
+            .floral-top {
+                top: -30px;
+            }
+            .floral-bottom {
+                bottom: -30px;
+            }
+            .font-secondary.display-4 {
+                font-size: 3.8rem;
+            }
+            h4.mb-3 {
+                font-size: 2.2rem;
+            }
+            h5.font-weight-normal {
+                font-size: 1.6rem;
+            }
+            h6.font-weight-normal {
+                font-size: 1.3rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
             .floral-decoration {
                 max-width: 600px;
             }
@@ -75,18 +191,29 @@
                 padding-top: 150px !important;
                 padding-bottom: 150px !important;
             }
-        }
-        
-        @media (max-width: 768px) {
-            .floral-decoration {
-                max-width: 400px;
+            .floral-top {
+                top: -20px;
             }
-            .container-fluid {
-                padding-top: 100px !important;
-                padding-bottom: 100px !important;
+            .floral-bottom {
+                bottom: -20px;
             }
             .container {
                 padding: 30px !important;
+            }
+            .font-secondary.display-4 {
+                font-size: 3.2rem;
+            }
+            h4.mb-3 {
+                font-size: 2rem;
+            }
+            h5.font-weight-normal {
+                font-size: 1.4rem;
+            }
+            h6.font-weight-normal {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 1.1rem;
             }
         }
         
@@ -102,6 +229,24 @@
                 padding: 20px !important;
                 margin: 0 15px;
             }
+            .font-secondary.display-4 {
+                font-size: 2.8rem;
+            }
+            h4.mb-3 {
+                font-size: 1.8rem;
+            }
+            h5.font-weight-normal {
+                font-size: 1.3rem;
+            }
+            h6.font-weight-normal {
+                font-size: 1.1rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .text-uppercase {
+                letter-spacing: 2px;
+            }
         }
     </style>
     <div id="music-control" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: rgba(255, 255, 255, 0.9); padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
@@ -114,62 +259,67 @@
         <img src="img/frames/image.png" class="floral-decoration floral-top" alt="Decoración floral superior">
         <img src="img/frames/image.png" class="floral-decoration floral-bottom" alt="Decoración floral inferior">
         <div class="container py-5">
-            <div class="section-title position-relative text-center">
-                <h1 class="font-secondary display-4">Nuestro matrimonio</h1>
-                <br>
-                <h1 class="font-secondary display-4">Roberto y Yoliza</h1>
+            <div class="section-title position-relative text-center mb-5">
+                <h1 class="font-secondary display-4 mb-4">Nuestro matrimonio</h1>
+                <h1 class="font-secondary display-4 mb-4">Roberto y Yoliza</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-5">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Con la bendición de Dios y nuestros padres</h5>
+                    <h5 class="font-weight-normal text-muted">Con la bendición de Dios y nuestros padres</h5>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-md-6 border-right border-primary">
-                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <p class="mb-2">Herman Llanos Soto<br>Carmen Rosa Blanco Almeyda</p>
+                    <div class="text-center text-md-right mr-md-3">
+                        <p class="mb-0">Herman Llanos Soto<br>Carmen Rosa Blanco Almeyda</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <p class="mb-2">Basilio Huachhuillca Ccoicca<br>Esther Bazán Asencios</p>
+                        <p class="mb-0">Basilio Huachuhuillca Ccoicca<br>Esther Bazán Asencios</p>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <h6 class="font-weight-normal text-muted mb-3 pb-3">Después de todo este maravillos tiempo juntos,
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center">
+                    <h6 class="font-weight-normal text-muted">Después de todo este maravilloso tiempo juntos,
                         hemos decidido dar un paso más en nuestra historia y queremos tenerlos presente en nuestro
                         matrimonio religioso</h6>
                 </div>
             </div>
-            <div class="section justify-content-center text-center">
-                <div class="text-center p-4">
+            <div class="section justify-content-center text-center mb-5">
+                <div class="ceremony-details p-4">
                     <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Fecha y hora</h6>
-                    <h4 class="mb-3">Sabado 04 de Octubre del 2025</h4>
-                    <p class="text-uppercase">07:30 pm</p>
-                    <a class="tmx-2" href="https://maps.app.goo.gl/cLfZFXhFSeZYbAzL6    ">Parroquia San José de
-                        Nazareth<br>
-                        Av. Inca Garcilaso de la Vega #148<br>
-                        San Gabriel – V.M.T.</a>
+                    <h4 class="mb-3">Sábado 04 de Octubre del 2025</h4>
+                    <p class="text-uppercase mb-4">07:30 pm</p>
+                    <a class="location-link" href="https://maps.app.goo.gl/cLfZFXhFSeZYbAzL6">
+                        <div class="location-details">
+                            Parroquia San José de Nazareth<br>
+                            Av. Inca Garcilaso de la Vega #148<br>
+                            San Gabriel – V.M.T.
+                        </div>
+                    </a>
                 </div>
             </div>
-            <br>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-5">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Nuestros Padrinos</h5>
-                    <p class="mb-2">
-                        Jose Alexander Dedios Ayala <br> Mariella Blanco de Dedios
-                </p>
+                    <h5 class="font-weight-normal text-muted mb-4">Nuestros Padrinos</h5>
+                    <p class="mb-0">
+                        Jose Alexander Dedios Ayala<br>
+                        Mariella Blanco de Dedios
+                    </p>
                 </div>
             </div>
-            <br>
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Recepción</h6>
-                <h5 class="mb-3">Eventos Chaupi<br>
-            Av. Latinoamérica #148, San Gabriel – V.M.T.</h4>
+                
+                        <div class="location-details mb-4"><a class="location-link" href="https://maps.app.goo.gl/6pC5ApyVkkijpCFH6">
+                    Eventos Chaupi<br>
+                    Av. Latinoamérica #148, San Gabriel – V.M.T.</a>
+                </div>
+                    
+                
                 <i class="far fa-heart text-dark"></i>
             </div>
         </div>
